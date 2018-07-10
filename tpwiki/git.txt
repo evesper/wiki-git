@@ -1,0 +1,85 @@
+Git is a version control tool. It helps you keep track of several versions of text files, such as program code or LaTeX documents (in principle it also works with binary files, but less nice). Git allows you to roll back your code to earlier versions, but also to synchronize your code between different locations (e.g. your local computer and the cluster). It is an alternative to [[Mercurial]].
+
+Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+== How to learn git ==
+
+To learn how to use git, have a look at the excellent interactive tutorial: http://try.github.com/.
+You might want to have a look at some of the fundamentals first: http://git-scm.com/book/en/v2, specifically [http://git-scm.com/book/en/v2/Getting-Started-Git-Basics section 1.3]. Having some knowledge of the basic concepts (e.g., what is your staging area?) will greatly improve your learning curve.
+
+Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+
+Another good git tutorial is [http://gitimmersion.com/index.html git immersion]. Another good way to learn it is ... LoremIpsum
+
+Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ 
+== How to obtain access to TU Delft Git ==
+
+Ask service punt to setup a git repository and provide them with the following information:
+* The faculty you are connected to: TNW
+* The department or research group under which the project falls: ChemE, TP
+* The name of the project:
+* Name and NetID of the manager:
+* If applicable: the end date of the project:
+
+Afterwards you will get a repository and access to a management page on which you can add contributors or readers to the repository.
+
+= Use of git with OpenFoam =
+
+== How to configure remote access==
+
+You probably want set LoremIpsum...., it means LoremIpsum... You can do this with
+<code>
+  git config --global push.default matching
+</code>
+
+== What should be in your .gitignore file ==
+
+Copy the .gitignore file from an OpenFoam directory by
+
+<code>
+ LoremIpsumCopyGitignore
+</code>
+
+Also consider to add ...
+
+== Git Status Takes a Long Time to Complete ==
+OpenFoam has a lot of small files both in the source and in the case directories.
+
+You can clean your repository with
+
+<code>
+ LoremIpsumCleaning
+</code>
+
+You can show only tracked files (and skip untracked files) by
+
+<code>
+ LoremIpsumGitStatusDontShowUntrackedFiles
+</code>
+
+== How to deal with having both a OpenFoam-XXX and user-XXX directory ==
+OpenFoam is shipped with a git repository in OpenFoam/OpenFoam-XXX. Generally it is recommended for OF users to implement new models in OpenFoam/user-XXX. Thus the base OF is always working (and you can pull bug-fixes without the need of merging, which would be straightforward since you don't expect conflicts when you just added classes to existing libraries).
+
+1. If you only work in OpenFoam/user-XXX: Initialise a new git repository here and push it to TU Delft git repository. Don't push the shipped git repository.
+
+2. When you only work within OpenFoam/OpenFoam-XXX make a new branch, on which you work using 
+<code>
+ foam 
+ git branch myBranch 
+</code>
+
+3. If you work (for historical reasons) in both, make in OpenFoam/OpenFoam-XXX a new branch, move the  src, applications 
+
+<code>
+ foam 
+ git branch myBranch  
+ mkdir user 
+ mv ~/OpenFoam/user-XXX/src user 
+ mv ~/OpenFoam/user-XXX/applications user 
+ ln -s user/src ~/OpenFoam/user-XXX/src 
+ ln -s user/applications ~/OpenFoam/user-XXX/applications 
+</code>
+
+[[Category:Tools]]
+
