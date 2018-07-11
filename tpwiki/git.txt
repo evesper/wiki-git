@@ -1,7 +1,6 @@
 Git is a version control tool. It helps you keep track of several versions of text files, such as program code or LaTeX documents (in principle it also works with binary files, but less nice). Git allows you to roll back your code to earlier versions, but also to synchronize your code between different locations (e.g. your local computer and the cluster). It is an alternative to [[Mercurial]].
 
-Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+mamamammamama
 == How to learn git ==
 
 To learn how to use git, have a look at the excellent interactive tutorial: http://try.github.com/.
